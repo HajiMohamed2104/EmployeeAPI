@@ -1,0 +1,51 @@
+# .NET build outputs
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userprefs
+*.ide
+*.vscode/
+
+# Visual Studio files
+.vs/
+*.ncb
+*.sdf
+*.opensdf
+*.sln.docstates
+
+# Rider files
+.idea/
+
+# ASP.NET temporary files
+App_Data/
+App_Start/
+
+# NuGet packages
+*.nupkg
+packages/
+.nuget/
+
+# EF Core migrations (optional, if you want to ignore generated migrations)
+Migrations/
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Logs
+*.log
+
+# Dotnet watch files
+dotnet-watch.json
+
+# JetBrains Rider local settings
+.idea/
+
+# User-specific files
+*.swp
+*.swo
+*.tmp
