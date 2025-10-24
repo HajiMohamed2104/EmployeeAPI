@@ -41,3 +41,4 @@
 /Users/HajiMohamed/EmployeeApi/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
 /Users/HajiMohamed/EmployeeApi/bin/Debug/net7.0/Mono.TextTemplating.dll
 /Users/HajiMohamed/EmployeeApi/bin/Debug/net7.0/System.CodeDom.dll
+/Users/HajiMohamed/EmployeeAPI/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.InMemory.dll

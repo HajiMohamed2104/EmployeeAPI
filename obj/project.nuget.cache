@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vS7HHl3Xtfqb/kZAAjJ0yykqpT9KYQWIa2nyZSmdg8/3O2sZkieIA+fxoiCknoN+XrAIyl4s6xz6nE3MarTptg==",
+  "dgSpecHash": "cQfQhSR/4TtJiNHV6LXbbOBpWRWxSYwP++wQzqqur9BNvIRUDUB4XsR2ZLDMxzerlne8VdhKjcUjGZOCZ/G3qQ==",
   "success": true,
-  "projectFilePath": "/Users/HajiMohamed/EmployeeApi/EmployeeApi.csproj",
+  "projectFilePath": "/Users/HajiMohamed/EmployeeAPI/EmployeeApi.csproj",
   "expectedPackageFiles": [
     "/Users/HajiMohamed/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/HajiMohamed/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
@@ -13,6 +13,7 @@
     "/Users/HajiMohamed/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.10/microsoft.entityframeworkcore.abstractions.7.0.10.nupkg.sha512",
     "/Users/HajiMohamed/.nuget/packages/microsoft.entityframeworkcore.analyzers/7.0.10/microsoft.entityframeworkcore.analyzers.7.0.10.nupkg.sha512",
     "/Users/HajiMohamed/.nuget/packages/microsoft.entityframeworkcore.design/7.0.10/microsoft.entityframeworkcore.design.7.0.10.nupkg.sha512",
+    "/Users/HajiMohamed/.nuget/packages/microsoft.entityframeworkcore.inmemory/7.0.10/microsoft.entityframeworkcore.inmemory.7.0.10.nupkg.sha512",
     "/Users/HajiMohamed/.nuget/packages/microsoft.entityframeworkcore.relational/7.0.10/microsoft.entityframeworkcore.relational.7.0.10.nupkg.sha512",
     "/Users/HajiMohamed/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "/Users/HajiMohamed/.nuget/packages/microsoft.extensions.caching.abstractions/7.0.0/microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",

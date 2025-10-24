@@ -1,10 +1,10 @@
+using EmployeeApi.Models;
 namespace EmployeeApi.Models
 {
     public class Employee
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string Position { get; set; }
-        public decimal Salary { get; set; }
+        public string Name { get; set; } = string.Empty;   // FIX
+        public string Position { get; set; } = string.Empty; // FIX
     }
 }

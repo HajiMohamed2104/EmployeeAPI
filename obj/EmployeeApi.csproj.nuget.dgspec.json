@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/HajiMohamed/EmployeeApi/EmployeeApi.csproj": {}
+    "/Users/HajiMohamed/EmployeeAPI/EmployeeApi.csproj": {}
   },
   "projects": {
-    "/Users/HajiMohamed/EmployeeApi/EmployeeApi.csproj": {
+    "/Users/HajiMohamed/EmployeeAPI/EmployeeApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/HajiMohamed/EmployeeApi/EmployeeApi.csproj",
+        "projectUniqueName": "/Users/HajiMohamed/EmployeeAPI/EmployeeApi.csproj",
         "projectName": "EmployeeApi",
-        "projectPath": "/Users/HajiMohamed/EmployeeApi/EmployeeApi.csproj",
+        "projectPath": "/Users/HajiMohamed/EmployeeAPI/EmployeeApi.csproj",
         "packagesPath": "/Users/HajiMohamed/.nuget/packages/",
-        "outputPath": "/Users/HajiMohamed/EmployeeApi/obj/",
+        "outputPath": "/Users/HajiMohamed/EmployeeAPI/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/HajiMohamed/.nuget/NuGet/NuGet.Config"
@@ -52,6 +52,10 @@
               "version": "[7.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
               "version": "[7.0.10, )"
             },

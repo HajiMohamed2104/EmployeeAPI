@@ -12,6 +12,7 @@
           "Microsoft.AspNetCore.OpenApi": "7.0.20",
           "Microsoft.EntityFrameworkCore": "7.0.10",
           "Microsoft.EntityFrameworkCore.Design": "7.0.10",
+          "Microsoft.EntityFrameworkCore.InMemory": "7.0.10",
           "Swashbuckle.AspNetCore": "6.5.0"
         },
         "runtime": {
@@ -94,6 +95,17 @@
         },
         "runtime": {
           "lib/net6.0/Microsoft.EntityFrameworkCore.Design.dll": {
+            "assemblyVersion": "7.0.10.0",
+            "fileVersion": "7.0.1023.36204"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.InMemory/7.0.10": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.10"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
             "assemblyVersion": "7.0.10.0",
             "fileVersion": "7.0.1023.36204"
           }
@@ -306,6 +318,13 @@
       "sha512": "sha512-ZDdJ2aAE529A1zd3sEvszADRCiJmlOKxc0WlhS+NIhSs68NESAApPZL4uHXrIk0vb7SBRnNPYPfOhASWf9dahg==",
       "path": "microsoft.entityframeworkcore.design/7.0.10",
       "hashPath": "microsoft.entityframeworkcore.design.7.0.10.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.InMemory/7.0.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WeUjWx80ZVQVXkHuEIO4kOCKUHo6C4RdB1bJZLSngLWqwrQrMTCZE90IGBz0330GXmXKbL4LyJO/rXO/w7cRNA==",
+      "path": "microsoft.entityframeworkcore.inmemory/7.0.10",
+      "hashPath": "microsoft.entityframeworkcore.inmemory.7.0.10.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Relational/7.0.10": {
       "type": "package",
