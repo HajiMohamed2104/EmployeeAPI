@@ -7,10 +7,8 @@ namespace EmployeeApi.Data
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) {}
 
-        // DbSet for Employees
-        public DbSet<Employee> Employees { get; set; } = null!; // Initialize to avoid CS8618 warning
+        public DbSet<Employee> Employees { get; set; } = null!;
 
-        // Optional: Seed data automatically
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

@@ -15,7 +15,7 @@ namespace EmployeeApi.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Employee>>> Get() => await _context.Employees.ToListAsync();
 
-        [HttpGet("{id}")]
+        [HttpGet("Employee Details")]
         public async Task<ActionResult<Employee>> Get(int id)
         {
             var emp = await _context.Employees.FindAsync(id);
@@ -30,7 +30,7 @@ namespace EmployeeApi.Controllers
             return CreatedAtAction(nameof(Get), new { id = employee.Id }, employee);
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("View Employee")]
         public async Task<IActionResult> Put(int id, Employee employee)
         {
             if (id != employee.Id) return BadRequest();
@@ -39,7 +39,7 @@ namespace EmployeeApi.Controllers
             return NoContent();
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("Remove Employee")]
         public async Task<IActionResult> Delete(int id)
         {
             var emp = await _context.Employees.FindAsync(id);

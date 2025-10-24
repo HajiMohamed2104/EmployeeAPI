@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/HajiMohamed/EmployeeAPI/EmployeeApi.csproj": {}
+    "/Users/HajiMohamed/Updated/EmployeeAPI/EmployeeApi.csproj": {}
   },
   "projects": {
-    "/Users/HajiMohamed/EmployeeAPI/EmployeeApi.csproj": {
+    "/Users/HajiMohamed/Updated/EmployeeAPI/EmployeeApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/HajiMohamed/EmployeeAPI/EmployeeApi.csproj",
+        "projectUniqueName": "/Users/HajiMohamed/Updated/EmployeeAPI/EmployeeApi.csproj",
         "projectName": "EmployeeApi",
-        "projectPath": "/Users/HajiMohamed/EmployeeAPI/EmployeeApi.csproj",
+        "projectPath": "/Users/HajiMohamed/Updated/EmployeeAPI/EmployeeApi.csproj",
         "packagesPath": "/Users/HajiMohamed/.nuget/packages/",
-        "outputPath": "/Users/HajiMohamed/EmployeeAPI/obj/",
+        "outputPath": "/Users/HajiMohamed/Updated/EmployeeAPI/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/HajiMohamed/.nuget/NuGet/NuGet.Config"
