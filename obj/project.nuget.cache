@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cQfQhSR/4TtJiNHV6LXbbOBpWRWxSYwP++wQzqqur9BNvIRUDUB4XsR2ZLDMxzerlne8VdhKjcUjGZOCZ/G3qQ==",
+  "dgSpecHash": "zo61cxa5MNhvDN6gC4hIVyAJlW2OSo9dqF3YFzvKttIcvVry2s8DTJd+EKUqULAXcs0PRY7FOrwXnOfD0uAF1g==",
   "success": true,
-  "projectFilePath": "/Users/HajiMohamed/EmployeeAPI/EmployeeApi.csproj",
+  "projectFilePath": "/Users/HajiMohamed/EmployeeAPI-1/EmployeeApi.csproj",
   "expectedPackageFiles": [
     "/Users/HajiMohamed/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/HajiMohamed/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

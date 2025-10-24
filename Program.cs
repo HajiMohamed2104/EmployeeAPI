@@ -4,7 +4,6 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Use In-Memory Database
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseInMemoryDatabase("EmployeeDb"));
 
@@ -14,24 +13,20 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Enable Swagger only in Development
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-// Middleware
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
 
-// Seed In-Memory Data (only once)
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
 
-    // Prevent duplicate seeding
     if (!db.Employees.Any())
     {
         db.Employees.AddRange(
