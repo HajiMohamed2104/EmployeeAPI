@@ -1,5 +1,6 @@
 using EmployeeApi.Data;
 using EmployeeApi.Models;
+using EmployeeApi.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,7 +11,13 @@ namespace EmployeeApi.Controllers
     public class EmployeesController : ControllerBase
     {
         private readonly AppDbContext _context;
-        public EmployeesController(AppDbContext context) => _context = context;
+        private readonly CsvExportService _csvExportService;
+        
+        public EmployeesController(AppDbContext context)
+        {
+            _context = context;
+            _csvExportService = new CsvExportService();
+        }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Employee>>> Get() => await _context.Employees.ToListAsync();
@@ -47,6 +54,20 @@ namespace EmployeeApi.Controllers
             _context.Employees.Remove(emp);
             await _context.SaveChangesAsync();
             return NoContent();
+        }
+
+        [HttpGet("Download CSV")]
+        public async Task<IActionResult> DownloadCsv()
+        {
+            var employees = await _context.Employees.ToListAsync();
+            
+            if (employees == null || !employees.Any())
+                return NotFound("No employees found to export.");
+            
+            var csvBytes = _csvExportService.GenerateEmployeeCsv(employees);
+            var fileName = $"employees_{DateTime.Now:yyyyMMddHHmmss}.csv";
+            
+            return File(csvBytes, "text/csv", fileName);
         }
     }
 }
