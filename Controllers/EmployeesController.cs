@@ -6,19 +6,17 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EmployeeApi.Controllers
 {
-    /// <summary>
-    /// [Route("api/[controller]")]
-    /// </summary>
+    [Route("api/[controller]")]
     [ApiController]
     public class EmployeesController : ControllerBase
     {
         private readonly AppDbContext _context;
         private readonly CsvExportService _csvExportService;
         
-        public EmployeesController(AppDbContext context)
+        public EmployeesController(AppDbContext context, CsvExportService csvExportService)
         {
             _context = context;
-            _csvExportService = new CsvExportService();
+            _csvExportService = csvExportService;
         }
 
         [HttpGet("View All Employees")]
@@ -39,12 +37,45 @@ namespace EmployeeApi.Controllers
             return CreatedAtAction(nameof(Get), new { id = employee.Id }, employee);
         }
 
-        [HttpPut("View Employee")]
-        public async Task<ActionResult<Employee>> Put(int id)
+        [HttpPut("Update Employee")]
+        public async Task<ActionResult<Employee>> Put(int id, Employee employee)
         {
-            var employee = await _context.Employees.FindAsync(id);
-            if (employee == null) return NotFound();
-            return employee;
+            if (id != employee.Id)
+            {
+                return BadRequest("ID mismatch");
+            }
+
+            var existingEmployee = await _context.Employees.FindAsync(id);
+            if (existingEmployee == null)
+            {
+                return NotFound();
+            }
+
+            existingEmployee.Name = employee.Name;
+            existingEmployee.Position = employee.Position;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!EmployeeExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
+        }
+
+        private bool EmployeeExists(int id)
+        {
+            return _context.Employees.Any(e => e.Id == id);
         }
 
         [HttpDelete("Remove Employee")]

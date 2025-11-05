@@ -1,4 +1,3 @@
-using EmployeeApi.Models;
 namespace EmployeeApi.Models
 {
     public class Employee

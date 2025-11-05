@@ -1,5 +1,6 @@
 using EmployeeApi.Data;
 using EmployeeApi.Models;
+using EmployeeApi.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<CsvExportService>();
 
 var app = builder.Build();
 
