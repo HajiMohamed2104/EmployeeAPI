@@ -6,7 +6,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EmployeeApi.Controllers
 {
-    [Route("api/[controller]")]
+    /// <summary>
+    /// [Route("api/[controller]")]
+    /// </summary>
     [ApiController]
     public class EmployeesController : ControllerBase
     {
@@ -19,17 +21,17 @@ namespace EmployeeApi.Controllers
             _csvExportService = new CsvExportService();
         }
 
-        [HttpGet]
+        [HttpGet("View All Employees")]
         public async Task<ActionResult<IEnumerable<Employee>>> Get() => await _context.Employees.ToListAsync();
 
-        [HttpGet("Employee Details")]
+        [HttpGet("View Specific Employee")]
         public async Task<ActionResult<Employee>> Get(int id)
         {
             var emp = await _context.Employees.FindAsync(id);
             return emp == null ? NotFound() : emp;
         }
 
-        [HttpPost]
+        [HttpPost("Add New Employee")]
         public async Task<ActionResult<Employee>> Post(Employee employee)
         {
             _context.Employees.Add(employee);
@@ -38,12 +40,11 @@ namespace EmployeeApi.Controllers
         }
 
         [HttpPut("View Employee")]
-        public async Task<IActionResult> Put(int id, Employee employee)
+        public async Task<ActionResult<Employee>> Put(int id)
         {
-            if (id != employee.Id) return BadRequest();
-            _context.Entry(employee).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
-            return NoContent();
+            var employee = await _context.Employees.FindAsync(id);
+            if (employee == null) return NotFound();
+            return employee;
         }
 
         [HttpDelete("Remove Employee")]

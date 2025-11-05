@@ -18,14 +18,28 @@ public class WeatherForecastController : ControllerBase
     }
 
     [HttpGet(Name = "GetWeatherForecast")]
-    public IEnumerable<WeatherForecast> Get()
+    public ActionResult<WeatherForecast> Get([FromQuery] string date, [FromQuery] int temperatureC, [FromQuery] string city)
     {
-        return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+        if (!DateOnly.TryParse(date, out DateOnly parsedDate))
         {
-            Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            TemperatureC = Random.Shared.Next(-20, 55),
-            Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-        })
-        .ToArray();
+            return BadRequest("Invalid date format. Please use YYYY-MM-DD format.");
+        }
+        
+        if (temperatureC < -50 || temperatureC > 60)
+        {
+            return BadRequest("Temperature must be between -50°C and 60°C.");
+        }
+        
+        if (string.IsNullOrWhiteSpace(city))
+        {
+            return BadRequest("City name cannot be empty.");
+        }
+        
+        return new WeatherForecast
+        {
+            Date = parsedDate,
+            TemperatureC = temperatureC,
+            City = city
+        };
     }
 }
