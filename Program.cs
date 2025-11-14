@@ -36,7 +36,13 @@ using (var scope = app.Services.CreateScope())
             new Employee { Id = 2, Name = "Bob", Position = "Tester" },
             new Employee { Id = 3, Name = "Charlie", Position = "Manager" },
             new Employee { Id = 4, Name = "Diana", Position = "Designer" },
-            new Employee { Id = 5, Name = "Ethan", Position = "Support" }
+            new Employee { Id = 5, Name = "Ethan", Position = "Support" },
+            new Employee { Id = 6, Name = "Fiona", Position = "Analyst" },
+            new Employee { Id = 7, Name = "George", Position = "Architect" },
+            new Employee { Id = 8, Name = "Hannah", Position = "Product Manager" },
+            new Employee { Id = 9, Name = "Ian", Position = "DevOps Engineer" },
+            new Employee { Id = 10, Name = "Julia", Position = "QA Lead" },
+            new Employee { Id = 11, Name = "Kevin", Position = "Data Scientist" }
         );
         db.SaveChanges();
     }
